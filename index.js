@@ -41,6 +41,17 @@
 
 // }
 
+var drums = document.querySelectorAll(".drum");
+
+for( var i = 0; i < drums.length; i++){
+  
+    drums[i].addEventListener("click", function (){
+       var buttonInnerHTML = this.innerHTML;
+       makeSound(buttonInnerHTML);
+   });
+
+}
+
 document.addEventListener("keydown", function(event){
     makeSound(event.key);
 
